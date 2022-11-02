@@ -1,7 +1,13 @@
 import BasketItem from "./BasketItem"
 
 const BasketList = (props) => {
-    const { order, handleBasketShow, removeItem } = props
+    const {
+        order,
+        handleBasketShow,
+        removeItem,
+        incrementQuantity,
+        decrementQuantity,
+    } = props
     const totalPrice = order.reduce((sum, item) => {
         return sum + item.price * item.quantity
     }, 0)
@@ -16,6 +22,8 @@ const BasketList = (props) => {
                         key={item.id}
                         {...item}
                         removeItem={removeItem}
+                        incrementQuantity={incrementQuantity}
+                        decrementQuantity={decrementQuantity}
                     />
                 ))
             ) : (
@@ -23,6 +31,9 @@ const BasketList = (props) => {
             )}
             <li className="collection-item active  light-blue accent-1 brown-text">
                 <b>Total Cost: {totalPrice}$</b>
+                <button className="secondary-content btn blue accent-2 btn-small">
+                    Order
+                </button>
             </li>
             <i
                 className="material-icons basket-close"
