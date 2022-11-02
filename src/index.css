@@ -29,3 +29,22 @@ nav {
 .card-content {
   flex-grow: 1;
 }
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+@media (min-width: 767px) {
+  .cart {
+    top: 5rem;
+    bottom:unset;
+  }
+}
+.cart-quantity {
+
+}
