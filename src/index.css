@@ -7,3 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+nav {
+  padding: 0 50px;
+}
+
+.content {
+  min-height: calc(100vh - 135px);
+  padding: 20px 0;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
