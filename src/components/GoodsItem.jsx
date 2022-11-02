@@ -11,7 +11,7 @@ const GoodsItem = (props) => {
             </div>
             <div className="card-action">
                 <button
-                    className="btn"
+                    className="btn blue accent-2"
                     onClick={() =>
                         addItem({
                             id,
