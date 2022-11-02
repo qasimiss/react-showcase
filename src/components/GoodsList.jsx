@@ -1,13 +1,16 @@
 import GoodsItem from "./GoodsItem"
-const GoodsList = (props) => {
-    const { goods = [], addItem } = props
+import { useContext } from "react"
+import { ShopContext } from "../context"
+
+const GoodsList = () => {
+    const { goods = [] } = useContext(ShopContext)
     if (!goods.length) {
         return <h3>Nothing is here</h3>
     }
     return (
         <div className="goods">
             {goods.map((item) => (
-                <GoodsItem key={item.id} {...item} addItem={addItem} />
+                <GoodsItem key={item.id} {...item} />
             ))}
         </div>
     )
